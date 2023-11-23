@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL:PLTGGQ</title>
+    <link rel="stylesheet" href="./game.css">
+    <link rel="icon" href="./../Game Assets/quest-icon.png" type="image/x-icon">
+</head>
+<body>
+<!--  BLACK BODY SCREEN -->
+
+    <div id="black-screen">
+        <div id="black-screen-text">
+            Within the heart of ancient ruins nestled deep in the forest near Eternia City, a mysterious sword emanates a gentle, ethereal hum. Its radiance, a vibrant aura, bathes the surroundings in a shimmering light, casting an otherworldly glow upon the forgotten stones. Abruptly, the illumination dissipates, and the sword falls silent, its humming ceasing in an instant.
+            
+            <br>
+            <br>
+            Click to continue
+        </div>
+        <!-- <div id="continue">
+            Click to continue
+        </div> -->
+    </div>
+<!-- BLACK SCREEN ^^^^^ -->
+<!-- BODY CONTENT🔽🔽 -->
+<div id="sec">
+<section id="status-story"> <!--WILL CONTAIN STATUS AND THE STORY TEXT-->
+
+    <div id="status">
+        <p id="character_name">character_name</p> <!--CHARACTER NAME-->
+        <br>
+        <div id="HP">
+            Health - <span id="HPCount"></span>
+            <div id="health-bar"></div>  <!--CSS CONTROLED HEALTH BAR-->
+        </div>
+        <br>
+        <div id="SP">
+            Stamina - <span id="SPCount"></span>
+            <div id="stamina-bar"></div>  <!--CSS CONTROLED STAMINA BAR-->
+        </div>
+    </div>
+
+    <div id="INVENTORY">
+        INVENTORY
+        <ul id="item-list">
+            <li>none</li>
+        </ul>
+    </div>
+
+
+    <div id="story-node">
+        Far away, within a secluded clearing enveloped by the forest's embrace, a young man stirs from an inexplicable slumber. His eyes flutter open to an unfamiliar world, memories a distant haze shrouded in mist. Yet, a palpable sense of urgency pervades his consciousness—a premonition of imminent danger creeping closer, threatening the tranquility of this land.
+        With no recollection of his own identity, only an instinctual awareness of an impending menace, the young man grapples with a single imperative—to ready himself for the encroaching darkness, a looming threat on the horizon that demands preparation and vigilance.
+    </div>
+
+</section>
+
+
+
+
+
+<section id="picture-choice">
+
+<div id="picture-ref">
+    <img id="picid" src="./../Game Assets/Mruq10X.gif" alt="">
+</div>
+
+<div id="choice-panel">
+    <!-- <h2>Do you:</h2> -->
+    <div id="choice-box">
+        <div id="choice1" class="choices">
+            Explore the clearing and the nearby surroundings for clues
+        </div>
+        <br>
+        <div id="choice2" class="choices">
+            Set out towards Eternia City to seek answers and prepare for the impending threat
+        </div>
+    </div>
+</div>
+
+</section>
+
+</div>
+<script src="./StoryData.js"></script>
+<script src="./game.js"></script>
+
+</body>
+</html>
