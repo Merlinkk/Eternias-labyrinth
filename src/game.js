@@ -132,6 +132,13 @@ function showTextNode(textNodeDesc) {
             playerStamina = maxStamina;
         }
     }
+
+    if(playerHealth==0){
+        localStorage.setItem('playerMessage','You died because of low health')
+        localStorage.setItem('progression',progression)
+        window.location.href = './gameover.html'
+    }
+
     console.log(playerHealth,playerStamina)
     healthAndStaminaBArAdjust()
 }    

@@ -10,6 +10,7 @@ screenState = {}
 // inventoryRemoval: items in this array are removed from the inventory html
 // healthChange: enter value positive or negative it will change the health of the character
 // staminaChange: enter value positive or negative it will change the stamina of the character
+// playerMessage: inform the player how or why he died
 
 
 const textNodes = [
@@ -75,6 +76,7 @@ const textNodes = [
                 nextText: `Main-story-1.1`,      //REDIRECT TO MAIN STORY
             },
         ],
+
         picSRC : `./../Game Assets/forest-clearing.jpg`
     },
 
