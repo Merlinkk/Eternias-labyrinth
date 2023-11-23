@@ -54,6 +54,7 @@ const textNodes = [
                 nextText: `Main-story-1.1`,         //REDIRECT TO MAIN STORY
             },
         ],
+        inventoryChange:['map'],
         picSRC : `./../Game Assets/word-wall.jpg`
     },
 

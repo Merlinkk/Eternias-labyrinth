@@ -22,7 +22,9 @@ healthAndStaminaBArAdjust()
 // MAP POPUP
 const cross = document.getElementById('cross')
 const popup = document.getElementById('popup')
-const map = document.getElementById('mapimg')
+const map = document.getElementById('mapicon')
+
+map.style.display = 'none'
 
 map.onclick=()=>{
     popup.style.display = 'flex'
@@ -104,6 +106,10 @@ function showTextNode(textNodeDesc) {
     if (textNode.inventoryChange) {
         addToInventory(textNode.inventoryChange);
         updateInventory();
+
+        if(inventoryArray.includes('map')){
+            map.style.display = 'initial'
+        }
     }
 
     // removing items from inventory
