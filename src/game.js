@@ -22,6 +22,7 @@ healthAndStaminaBArAdjust()
 // 
 const displayNone = () =>{
     blackScreen.style.display = "none"
+    document.body.style.overflow = `initial`
     blackScreen.removeEventListener('click',displayNone) 
 }
 blackScreen.addEventListener('click',displayNone)

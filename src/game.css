@@ -144,6 +144,9 @@ body{
 }
 
 @media(max-width:500px) and (max-height:1000px){
+    body{
+        overflow: hidden;
+    }
     #black-screen-text{
         margin-left: 10%;
         margin-right: 10%;
