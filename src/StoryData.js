@@ -12,6 +12,7 @@ screenState = {}
 // staminaChange: enter value positive or negative it will change the stamina of the character
 // playerMessage: inform the player how or why he died
 
+// add map in inventory for map popup
 
 const textNodes = [
     {
@@ -54,7 +55,6 @@ const textNodes = [
                 nextText: `Main-story-1.1`,         //REDIRECT TO MAIN STORY
             },
         ],
-        inventoryChange:['map'],
         picSRC : `./../Game Assets/word-wall.jpg`
     },
 
