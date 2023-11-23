@@ -8,6 +8,11 @@
     <link rel="icon" href="./../Game Assets/quest-icon.png" type="image/x-icon">
 </head>
 <body>
+
+    <div id="popup">
+        <span id="cross">&nbsp;&nbsp;X&nbsp;&nbsp;</span>
+        <img id="img" src="./../Game Assets/map.webp" height="98%"> 
+    </div>
 <!--  BLACK BODY SCREEN -->
 
     <div id="black-screen">
@@ -42,7 +47,11 @@
     </div>
 
     <div id="INVENTORY">
-        INVENTORY
+        <div style="display: flex;justify-content:space-between;align-items:center;">
+            <span>INVENTORY</span>
+            <span id="mapimg"><img src="./../Game Assets/map.png" height="40px" width="40px"></span>
+        </div>
+        
         <ul id="item-list">
             <li>none</li>
         </ul>

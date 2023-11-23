@@ -18,8 +18,23 @@ var inventoryArray = []
 let playerHealth = 70
 let playerStamina = 80
 healthAndStaminaBArAdjust()
+//
+// MAP POPUP
+const cross = document.getElementById('cross')
+const popup = document.getElementById('popup')
+const map = document.getElementById('mapimg')
 
-// 
+map.onclick=()=>{
+    popup.style.display = 'flex'
+    document.body.style.overflow = 'hidden'
+}
+
+cross.onclick = () =>{
+    popup.style.display = 'none'
+    document.body.style.overflow = 'initial'
+}
+
+//
 const displayNone = () =>{
     blackScreen.style.display = "none"
     document.body.style.overflow = `initial`
