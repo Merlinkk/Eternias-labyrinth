@@ -21,8 +21,8 @@ const SPCount = document.getElementById('SPCount')
 const saveGame = document.getElementById('saveGame')
 const loadGame = document.getElementById('loadGame')
 let currentNode = ''
-let gameSaveObjectArray = []
-gameSaveObjectArray = JSON.parse(localStorage.getItem('gameSaveArray'))
+let gameSaveObjectArray = JSON.parse(localStorage.getItem('gameSaveArray')) || [];
+
 
 if(gameSaveObjectArray){
     var isPlayerExists = gameSaveObjectArray.findIndex(object => object.name === playerName)
@@ -63,6 +63,7 @@ saveGame.addEventListener('click',()=>{
     localStorage.setItem('gameSaveArray', JSON.stringify(gameSaveObjectArray))
     console.log(gameSaveObjectArray);
 })
+
 
 loadGame.addEventListener('click',()=>{
     console.log('your game was saved')
