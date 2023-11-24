@@ -1,4 +1,5 @@
-localStorage.clear()
+localStorage.removeItem('playerMessage')
+localStorage.removeItem('progression')
 
 const storyText = document.getElementById('story-node')
 const blackScreen = document.getElementById('black-screen')
@@ -12,6 +13,10 @@ const healthBar = document.getElementById('health-bar')
 const staminaBar = document.getElementById('stamina-bar')
 const HPCount = document.getElementById('HPCount')
 const SPCount = document.getElementById('SPCount')
+
+//Game save Mechanic 
+currentNode = ''
+// 
 
 var progression = 0
 var inventoryArray = []
@@ -55,7 +60,7 @@ function startGame(){
 // updateing text from StoryDATA JS
 function showTextNode(textNodeDesc) {
     const textNode = textNodes.find(textNode => textNode.id == textNodeDesc)
-    
+    currentNode = textNode.id
     // text updated here
     storyText.innerText = textNode.text
     console.log(textNode.options[0].nextText)
