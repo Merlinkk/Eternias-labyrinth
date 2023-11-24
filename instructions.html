@@ -60,12 +60,23 @@
     </div>
 
     <script>
+        const username = document.getElementById('name')
         const playerName = document.getElementById('nickName')
         const startButton = document.getElementById('startgame')
         const cross = document.getElementById('cross')
         const popup = document.getElementById('popup')
         const infodiv = document.getElementById('info')
+
+        const borderGreen = '1px solid rgb(0, 255, 119)'
+        const borderRed = '1px solid red'
+        playerName.addEventListener('input',()=>{
+            playerName.style.borderBottom = borderGreen
+        })
+        username.addEventListener('input',()=>{
+            username.style.borderBottom = borderGreen
+        })
         
+
         infodiv.onclick=()=>{
             popup.style.display = 'initial'
         }
@@ -73,8 +84,23 @@
             popup.style.display = 'none'
         }
         startButton.onclick=()=>{
-            localStorage.setItem('playerName', playerName.value)
-            window.location.href = './src/game.html'
+            if(username.value && playerName.value){
+                localStorage.setItem('playerName', playerName.value)
+                window.location.href = './src/game.html'
+            }
+            else if(!playerName.value && !username.value){
+                playerName.style.borderBottom = borderRed
+                username.style.borderBottom = borderRed
+                playerName.style.borderStyle = dotted
+                username.style.borderStyle = dotted
+            }
+            else if(!username.value){
+                username.style.borderBottom = borderRed
+            }
+            else if(!playerName.value){
+                playerName.style.borderBottom = borderRed
+            }
+            
         }
     </script>
     
