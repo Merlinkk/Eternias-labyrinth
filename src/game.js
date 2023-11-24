@@ -24,10 +24,12 @@ let currentNode = ''
 let gameSaveObjectArray = []
 gameSaveObjectArray = JSON.parse(localStorage.getItem('gameSaveArray'))
 
-var isPlayerExists = gameSaveObjectArray.findIndex(object => object.name === playerName)
-if(isPlayerExists !==-1){
+if(gameSaveObjectArray){
+    var isPlayerExists = gameSaveObjectArray.findIndex(object => object.name === playerName)
+    if(isPlayerExists !==-1){
     loadGame.style.backgroundColor = 'cyan'
     console.log('existing save data exists')
+}
 }
 
 saveGame.addEventListener('click',()=>{
@@ -63,7 +65,7 @@ saveGame.addEventListener('click',()=>{
 })
 
 loadGame.addEventListener('click',()=>{
-    console.log('your game was loaded')
+    console.log('your game was saved')
     document.getElementById('character_name').innerHTML = gameSaveObjectArray[isPlayerExists].name
     showTextNode(gameSaveObjectArray[isPlayerExists].savedTextNode)
     inventoryArray = gameSaveObjectArray[isPlayerExists].savedInventoryArray
