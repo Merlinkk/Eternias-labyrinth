@@ -9,6 +9,8 @@ const advice = document.getElementById('advice')
 
 const playAgain = document.getElementById('playAgain')
 
+const playerName = localStorage.getItem('playerName')
+
 window.onload=()=>{
     progressionStatus.innerHTML = progression
     if(playerMessageContent != `undefined`){
@@ -17,6 +19,8 @@ window.onload=()=>{
 
     advice.innerHTML = advArray[Math.floor(Math.random()*7)]
     console.log(Math.floor(Math.random()*7))
+
+    document.getElementById('endUserName').innerHTML = playerName
 
 }
 

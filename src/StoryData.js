@@ -11,7 +11,7 @@ screenState = {}
 // healthChange: enter value positive or negative it will change the health of the character
 // staminaChange: enter value positive or negative it will change the stamina of the character
 // playerMessage: inform the player how or why he died
-
+// progressUpdate : add porgression points in it to show at the end
 // add map in inventory for map popup
 
 const textNodes = [
@@ -20,7 +20,7 @@ const textNodes = [
         text: `Far away, within a secluded clearing enveloped by the forest's embrace, a young man stirs from an inexplicable slumber. His eyes flutter open to an unfamiliar world, memories a distant haze shrouded in mist. Yet, a palpable sense of urgency pervades his consciousness—a premonition of imminent danger creeping closer, threatening the tranquility of this land.
         With no recollection of his own identity, only an instinctual awareness of an impending menace, the young man grapples with a single imperative—to ready himself for the encroaching darkness, a looming threat on the horizon that demands preparation and vigilance.'`,
         screenState : {},
-        state: {progression: 0},
+        progressUpdate :+5,
         options : [
             {
                 text: `Explore the clearing and the nearby surroundings for clues`,

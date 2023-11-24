@@ -44,7 +44,8 @@ saveGame.addEventListener('click',()=>{
             savedTextNode: currentNode,
             savedInventoryArray: inventoryArray,
             savedHealth: playerHealth,
-            savedStamina: playerStamina
+            savedStamina: playerStamina,
+            savedProgress: progression
         };
     }       
     // Add a new save object
@@ -55,7 +56,8 @@ saveGame.addEventListener('click',()=>{
             savedTextNode: currentNode,
             savedInventoryArray: inventoryArray,
             savedHealth: playerHealth,
-            savedStamina: playerStamina
+            savedStamina: playerStamina,
+            savedProgress: progression
         };
         gameSaveObjectArray.push(gameSaveObject);
     }
@@ -72,6 +74,7 @@ loadGame.addEventListener('click',()=>{
     inventoryArray = gameSaveObjectArray[isPlayerExists].savedInventoryArray
     playerHealth = gameSaveObjectArray[isPlayerExists].savedHealth
     playerStamina = gameSaveObjectArray[isPlayerExists].savedStamina
+    progression = gameSaveObjectArray[isPlayerExists].savedProgress
     healthAndStaminaBArAdjust()
     updateInventory()
 })
@@ -224,6 +227,10 @@ function showTextNode(textNodeDesc) {
         localStorage.setItem('playerMessage','You died because of low health')
         localStorage.setItem('progression',progression)
         window.location.href = './gameover.html'
+    }
+
+    if(textNode.progressUpdate){
+        progression += textNode.progressUpdate
     }
 
     console.log(playerHealth,playerStamina)
