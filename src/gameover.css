@@ -93,7 +93,7 @@ h3{
 }
 
 @media (min-width: 768px) {
-  .button-59 {
+    #playAgain button {
     min-width: 170px;
   }
 }

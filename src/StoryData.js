@@ -31,7 +31,7 @@ const textNodes = [
                 nextText: `Main-story-1.1`,  //REDIRECT TO MAIN STORY
             },
         ],
-        picSRC : `./../Game Assets/Mruq10X.gif`
+        picSRC : `./../Game-Assets/Mruq10X.gif`
     },
 
     // SIDE STORY RUNIC SYMBOLS ******************************************
@@ -55,7 +55,7 @@ const textNodes = [
                 nextText: `Main-story-1.1`,         //REDIRECT TO MAIN STORY
             },
         ],
-        picSRC : `./../Game Assets/word-wall.jpg`
+        picSRC : `./../Game-Assets/word-wall.jpg`
     },
 
     // Side-story-1.1
@@ -78,7 +78,7 @@ const textNodes = [
             },
         ],
 
-        picSRC : `./../Game Assets/forest-clearing.jpg`
+        picSRC : `./../Game-Assets/forest-clearing.jpg`
     },
 
     // Side-story-1.2

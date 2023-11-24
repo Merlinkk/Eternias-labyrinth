@@ -1,5 +1,5 @@
 const play = document.getElementById('play')
 
 play.onclick=()=>{
-    window.location.href = './src/game.html'
+    window.location.href = './instructions.html'
 }

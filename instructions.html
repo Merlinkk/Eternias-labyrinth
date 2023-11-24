@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Adventurer</title>
+    <link rel="stylesheet" href="./instructions.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div id="container">
+        <div id="text">
+            <br>
+            <h1>Welcome, Adventurer!</h1> <br>
+            <p>Welcome to the mystical realm of Eternia. Are you ready to embark on an epic journey filled with adventure?
+            Your decisions will shape the destiny of your story. Will you be complete your story, or die an early death? Will you find all the items that you need or will you fall short? If this intrigues you, then press the PLAY button and go forth!</p>
+            <br>
+            <div id="nameDiv">
+            <label for="name">Enter your name: </label> <input type="text" class="inp" name="name" id="name">
+            </div>
+            <br>
+            <div id="nickNameDiv">
+                <label for="nickName">Enter your Nickname: </label> <input class="inp" type="text" name="nickName" id="nickName">
+            </div>
+            <br>
+            <img id="info" src="./Game-Assets/game-guide-white.png" alt="">
+            <br>
+            <div id="START">
+                <button id="startgame">Play</button>
+            </div>
+            <!-- <a href="start_game.html" class="start-button">Start Your Adventure</a> -->
+        </div>
+    </div>
+
+    <div id="popup">
+        <span id="cross">&nbsp;&nbsp;X&nbsp;&nbsp;</span>
+        <span id="instructionsFlex">
+            <br>
+            <span id="insHeading">Instructions</span> <br><br>
+            <span id="insList">
+                <ul>
+                    <li>
+                        This game is a text based role playing game where the player's choices and decisions pave way for the future of the story.
+                    </li>
+                    <li>
+                        You have to be aware of your health bar and stamina bar to make sure you don't faint or die before you complete your story.
+                    </li>
+                    <li>
+                        This game scores you on your progession and the number of prerequisites you meet at the end of your story which would define the fate of your journey after Eternia.
+                    </li>
+                    <li>
+                        You will score progression points each time you come across an item that would help you on your journey beyond Eternia.
+                    </li>
+                    <li>
+                        REMEMBER! Each choice can have different consequences or can result in a common conclusion. Be sure to save or load the game as needed.
+                    </li>
+                </ul>
+            </span>
+        </span>
+    </div>
+
+    <script>
+        const playerName = document.getElementById('nickName')
+        const startButton = document.getElementById('startgame')
+        const cross = document.getElementById('cross')
+        const popup = document.getElementById('popup')
+        const infodiv = document.getElementById('info')
+        
+        infodiv.onclick=()=>{
+            popup.style.display = 'initial'
+        }
+        cross.onclick=()=>{
+            popup.style.display = 'none'
+        }
+        startButton.onclick=()=>{
+            localStorage.setItem('playerName', playerName.value)
+            window.location.href = './src/game.html'
+        }
+    </script>
+    
+</body>
+</html>

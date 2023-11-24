@@ -179,16 +179,19 @@ body{
 #saveGame,#loadGame{
     height: 40px;
     padding: 5px;
+    border: 1px solid white;
     margin: 2px;
 }
 #saveDrive{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    border: 1px solid white;
+    align-items: center;    
     margin: 3px;
     margin-top: 3px;
+}
 
+#saveGame:hover,#loadGame:hover{
+    background-color: lime;
 }
 
 @media(max-width:500px) and (max-height:1000px){

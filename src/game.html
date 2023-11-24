@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EL:PLTGGQ</title>
     <link rel="stylesheet" href="./game.css">
-    <link rel="icon" href="./../Game Assets/quest-icon.png" type="image/x-icon">
+    <link rel="icon" href="./../Game-Assets/quest-icon.png" type="image/x-icon">
 </head>
 <body>
 
     <div id="popup">
         <span id="cross">&nbsp;&nbsp;X&nbsp;&nbsp;</span>
-        <img id="img" src="./../Game Assets/map.webp" height="98%"> 
+        <img id="img" src="./../Game-Assets/map.webp" height="98%"> 
     </div>
 <!--  BLACK BODY SCREEN -->
 
@@ -46,15 +46,22 @@
         </div>
         <br>
         <div id="saveDrive" style="display: flex;">
-            <img id="saveGame" src="./../Game Assets/save.png"  alt="">
-            <img id="loadGame" src="./../Game Assets/load.png"  alt="">
+            <div style="display: flex;flex-direction:column;align-items:center;">
+                <label for="saveGame">Save Game</label>
+                <img id="saveGame" src="./../Game-Assets/save.png"  alt="">
+            </div>
+            <div  style="display: flex;flex-direction:column;align-items:center;">
+                <label for="loadGame">Load Game</label>
+                <img id="loadGame" src="./../Game-Assets/load.png"  alt="">
+            </div>
+            
         </div>
     </div>
 
     <div id="INVENTORY">
         <div style="display: flex;justify-content:space-between;align-items:center;">
             <span>INVENTORY</span>
-            <span id="mapicon"><img src="./../Game Assets/map.png" height="40px" width="40px"></span>
+            <span id="mapicon"><img src="./../Game-Assets/map.png" height="40px" width="40px"></span>
         </div>
         
         <ul id="item-list">
@@ -77,7 +84,7 @@
 <section id="picture-choice">
 
 <div id="picture-ref">
-    <img id="picid" src="./../Game Assets/Mruq10X.gif" alt="">
+    <img id="picid" src="./../Game-Assets/Mruq10X.gif" alt="">
 </div>
 
 <div id="choice-panel">

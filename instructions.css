@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Arbutus&family=Fredoka&family=Nunito+Sans:opsz@6..12&family=Poppins&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#background{
+    background-image: url('./Game-Assets/welcomeWall4.png');
+    background-size: cover;
+    height: 100%;
+    filter: blur(4px);
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+#container{
+    margin-right: 20%;
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    margin-left: 20%;
+}
+#text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#START{
+    margin:30px;
+}
+#START button{
+    padding: 20px;
+    color: white;
+    background-color: lime;
+}
+
+/* CSS */ /*referenced form https://getcssscan.com/css-buttons-examples*/
+#START button{
+  align-items: center;
+  background-color: #00DBC2;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#START button:focus {
+  color: #171e29;
+}
+
+#START button:hover {
+  border-color: rgb(0, 255, 119);
+  color: rgb(0, 255, 119);
+  fill: rgb(0, 255, 119);
+  background-color: #000;
+}
+
+#START button:active {
+  border-color: rgb(0, 255, 119);
+  color: rgb(0, 255, 119);
+  fill: rgb(0, 255, 119);
+}
+
+@media (min-width: 768px) {
+    #START button {
+    min-width: 170px;
+  }
+}
+
+h1{
+    background-color: white;
+    padding: 30px;
+    border-radius: 2rem;
+    font-family: Arbutus;
+}
+/* h1:hover{
+    color: #00DBC2;
+    background-color: black;
+    border: 1px solid white;
+    transition: .3s ease-in-out;
+} */
+h1:hover{
+    color: rgb(0, 255, 119);
+    background-color: black;
+    border: 1px solid rgb(0, 255, 119);
+    transition: .3s ease-in-out;
+}
+h1:not(:hover){
+    color: #000;
+    background-color: white;
+    border:none;
+    transition: .7s ease-in-out;
+}
+p{
+    font-size: 30px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: rgba(87, 255, 244, 0.747);
+    border-radius: 20px;
+    text-align: justify;
+}
+#nameDiv,#nickNameDiv{
+    border: 1px solid white;
+    padding: 10px;
+    color :white;
+    background-color: rgba(0, 0, 0, 0.43);
+    border-radius: 1rem;
+}
+/* .inp{
+    box-shadow: 1px 1px 1px red;
+} */
+.inp{
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid white;
+    color: yellow;
+    text-align: center;
+}
+
+.inp:focus{
+    outline: none;
+}
+#info:hover{
+    background-color: rgba(0, 0, 0, 0.77);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#popup{
+    width: initial;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0 0 0 );
+    top: 0px;
+    /* left: 0; */
+    position: absolute;
+    /* justify-content: center; */
+    border-radius: 10px;
+    /* align-items: center; */
+    /* box-shadow: 5px 5px 20px 10px rgba(0, 255, 119,0.12); */
+    z-index: 33;
+    /* overflow: scroll;*/
+    color: white;
+    display: none;
+}
+#cross{
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    color: red;
+    font-weight: 900;
+    font-size: 30px;
+    font-family: arial;
+    background-color: cyan;
+}
+#cross:hover{
+    cursor: pointer;
+    background-color: rgb(0, 255, 119);
+}
+
+#instructionsFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#insHeading{
+    font-size: 70px;
+    font-family: Arbutus;
+    background-color: rgba(0, 255, 119, 0.337);
+    border-radius: 1rem;
+    padding: 5px;
+}
+#insList{
+    font-size: 20px; 
+}
+#insList li{
+    list-style-type: none;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid rgb(0, 255, 119);
+}
+
+
+@media(max-width:500px) and (max-height:1000px){
+    #container {
+        margin-right: 10%;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        margin-left: 10%;
+    }
+    p {
+        font-size: 20px;
+        border: 1px solid white;
+        padding: 10px;
+        background-color: rgba(87, 255, 244, 0.747);
+        border-radius: 20px;
+        text-align: justify;
+    } 
+    h1 {
+        background-color: white;
+        padding: 20px;
+        width: 70%;
+        text-align: center;
+    }  
+    #cross {
+        position: relative;
+        left: 45%;
+        background-color: black;
+    }
+    #insHeading {
+        font-size: 50px;
+        padding: 10px;
+    }
+    #insList {
+       font-size: 20px;
+       margin-right: 5%;
+       margin-left: 5%;
+    }
+}

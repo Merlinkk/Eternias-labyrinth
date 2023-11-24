@@ -1,6 +1,8 @@
 localStorage.removeItem('playerMessage')
 localStorage.removeItem('progression')
 
+let playerName = localStorage.getItem('playerName')
+
 const storyText = document.getElementById('story-node')
 const blackScreen = document.getElementById('black-screen')
 const body = document.body
@@ -14,8 +16,14 @@ const staminaBar = document.getElementById('stamina-bar')
 const HPCount = document.getElementById('HPCount')
 const SPCount = document.getElementById('SPCount')
 
+
 //Game save Mechanic 
-currentNode = ''
+const saveGame = document.getElementById('saveGame')
+let currentNode = ''
+let savedArray = []
+let savedHealth 
+let savedStamina
+
 // 
 
 var progression = 0
@@ -45,6 +53,7 @@ cross.onclick = () =>{
 const displayNone = () =>{
     blackScreen.style.display = "none"
     document.body.style.overflow = `initial`
+    document.getElementById('character_name').innerHTML = playerName
     blackScreen.removeEventListener('click',displayNone) 
 }
 blackScreen.addEventListener('click',displayNone)
