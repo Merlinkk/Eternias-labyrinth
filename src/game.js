@@ -19,10 +19,59 @@ const SPCount = document.getElementById('SPCount')
 
 //Game save Mechanic 
 const saveGame = document.getElementById('saveGame')
+const loadGame = document.getElementById('loadGame')
 let currentNode = ''
-let savedArray = []
-let savedHealth 
-let savedStamina
+let gameSaveObjectArray = []
+gameSaveObjectArray = JSON.parse(localStorage.getItem('gameSaveArray'))
+
+var isPlayerExists = gameSaveObjectArray.findIndex(object => object.name === playerName)
+if(isPlayerExists !==-1){
+    loadGame.style.backgroundColor = 'cyan'
+    console.log('existing save data exists')
+}
+
+saveGame.addEventListener('click',()=>{
+    console.log('your game was saved')
+    const existingSaveIndex = gameSaveObjectArray.findIndex(object => object.name === playerName);
+
+    // Update the existing save object
+    if (existingSaveIndex !== -1) {
+
+        gameSaveObjectArray[existingSaveIndex] = {
+            name: playerName,
+            savedTextNode: currentNode,
+            savedInventoryArray: inventoryArray,
+            savedHealth: playerHealth,
+            savedStamina: playerStamina
+        };
+    }       
+    // Add a new save object
+    else {
+        
+        const gameSaveObject = {
+            name: playerName,
+            savedTextNode: currentNode,
+            savedInventoryArray: inventoryArray,
+            savedHealth: playerHealth,
+            savedStamina: playerStamina
+        };
+        gameSaveObjectArray.push(gameSaveObject);
+    }
+
+    localStorage.setItem('gameSaveArray', JSON.stringify(gameSaveObjectArray))
+    console.log(gameSaveObjectArray);
+})
+
+loadGame.addEventListener('click',()=>{
+    console.log('your game was loaded')
+    document.getElementById('character_name').innerHTML = gameSaveObjectArray[isPlayerExists].name
+    showTextNode(gameSaveObjectArray[isPlayerExists].savedTextNode)
+    inventoryArray = gameSaveObjectArray[isPlayerExists].savedInventoryArray
+    playerHealth = gameSaveObjectArray[isPlayerExists].savedHealth
+    playerStamina = gameSaveObjectArray[isPlayerExists].savedStamina
+    healthAndStaminaBArAdjust()
+    updateInventory()
+})
 
 // 
 
