@@ -201,6 +201,7 @@ body{
     #black-screen-text{
         margin-left: 10%;
         margin-right: 10%;
+        font-size: 25px;
     }
     #sec{
         flex-direction: column;
