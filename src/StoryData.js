@@ -14,6 +14,10 @@ screenState = {}
 // progressUpdate : add porgression points in it to show at the end
 // add map in inventory for map popup
 
+// 🫙 add images <<<<<<<<<<<?????????????????>>>>>>>>>>>>>>>>
+// ✨MAIN STORY LINE 
+// ⭕ ADD PROGRESSION
+
 const textNodes = [
     // Main-Story-1 ✨⭕
     {
@@ -426,6 +430,7 @@ const textNodes = [
         
         The young man's senses sharpen, his curiosity and determination ignited by Theodric's direct guidance. There's a weightiness to Theodric's words, an aura of significance that amplifies the young man's understanding of the gravity of his quest.`,
         screenState: {},
+        inventoryChange :['map'],
         options: [
             {
                 text: `Ask him what he means?`,
@@ -468,5 +473,186 @@ const textNodes = [
             },
         ],
         picSRC: `./../Game-Assets/historian2.jpg`
+    },
+    
+    // if you continue you die because of wolves
+    {
+        id: `Side-2`,
+        text: `The moment of decision weighs heavy on the young man as he stands at the city gates, contemplating the path ahead. The call of the forest and its mysterious ruins pulls at him, but a sense of uncertainty clouds his resolve.
+
+        Torn between the urgency to seek the answers concealed within the ancient ruins and the nagging hesitation that tugs at the corners of his mind, he grapples with the decision before him.
+        
+        The allure of the inn's comfort and the promise of a new day's light tugs at his thoughts, offering the solace of familiar surroundings and the chance to embark on the journey with a fresh perspective. Perhaps a night's rest would bring clarity to his mind, easing the weight of uncertainty that burdens his shoulders.
+        
+        On the other hand, the urgency to uncover the truths hinted at by Theodric and the map's cryptic pathways fuel his determination. The young man wrestles with the choice between heeding the call of adventure and seeking respite for the night to begin anew with a rested mind. What do you do?`,
+        screenState: {},
+        options: [
+            {
+                text: `Continue towards the ruins`,
+                nextText: `Side-2.1`
+            },
+            {
+                text: `Go the the Inn`,
+                nextText: `Inn`
+            },
+        ],
+        picSRC: `` //🫙 show city gates
+    },
+
+    // die going to ruins in the night
+    {   
+        id: `Side-2.1`,
+        text: `Losing his way in the depths of the unfamiliar forest, exhausted and disoriented, he  encounters the dangers lurking within the wilderness. The young man's valiant efforts to escape the pursuing wolves, his heart racing with fear and adrenaline, ultimately culminate in a tragic outcome. The merciless jaws of the wild creatures claim him, sealing his fate in the depths of the uncharted lands he sought to conquer.`,
+        screenState: {},
+        options: [
+            {
+                text: `Continue`,
+                nextText: `Side-2.2`
+            },
+        ],
+        picSRC: `./../Game-Assets/death-night.gif` //🫙
+    },
+
+    {   
+        id: `Side-2.2`,
+        text: `The young man's valiant efforts to escape the pursuing wolves, his heart racing with fear and adrenaline, ultimately culminate in a tragic outcome. The merciless jaws of the wild creatures claim him, sealing his fate in the depths of the uncharted lands he sought to conquer.The young man's valiant efforts to escape the pursuing wolves, his heart racing with fear and adrenaline, ultimately culminate in a tragic outcome. The merciless jaws of the wild creatures claim him, sealing his fate in the depths of the uncharted lands he sought to conquer.`,
+        playerMessage: `The wolves showed no mercy, and with you fatigued, the only end is your unfortunate end.`,
+        screenState : {black:true,gameOver:true},
+        options: [
+            {
+                text: `END`,
+                nextText: `END`,     //END
+            },
+        ],
+        picSRC: `./../Game-Assets/death-night.gif` //🫙
+    },
+
+    {
+        id: `Inn`,
+        text: `The young man, feeling the weight of uncertainty pressing upon him, opts for the solace of the inn. With a sigh, he turns away from the forest's enigmatic pull, choosing the familiar comforts of the inn's embrace for the night.
+
+        Retreating from the looming mysteries that await in the forest, he seeks refuge within the inn's welcoming walls. The promise of a warm hearth, a soft bed, and the gentle reprieve of the night's rest beckon to him, offering a chance to clear his mind and reassess his path come the dawn of a new day.`,
+        screenState: {},
+        options: [
+            {
+                text: `Continue`,
+                nextText: `Inn-1`
+            },
+        ],
+        picSRC: `` //🫙 INN
+    },
+
+    {
+        id: `Inn-1`,
+        text: `As he enters the inn, a sense of relief washes over him, momentarily easing the weight of the decisions that weighed heavily on his shoulders. Amidst the flickering glow of hearth fires and the comforting chatter of fellow travelers, he finds a momentary respite from the uncertainties that cloud his mind.
+
+        Settling into the inn's embrace, he contemplates the events that led him here, pondering the mysteries of the forest and the ruins that remain tantalizingly out of reach. Tomorrow's light will bring new opportunities, and perhaps with a rested mind, clarity will dawn upon his quest.
+        
+        The inn's tranquility envelops him, offering a temporary sanctuary from the complexities and unknowns that lie beyond its doors. The young man retires to his room, seeking solace in the promise of a new day and the possibilities that await with the rising sun.`,
+        screenState: {},
+        options: [
+            {
+                text: `Continue`,
+                nextText: `Inn-2`
+            },
+        ],
+        picSRC: `` //🫙 INN
+    },
+
+    {
+        id: `Inn-2`,
+        text: `As the morning sun casts its golden hues across the horizon, the young man stirs within the confines of the inn, rejuvenated by a night of rest. With determination rekindled and a sense of purpose guiding his steps, he readies himself for the journey that awaits beyond the inn's threshold.
+
+        The clatter of breakfast chatter and the savory scent of morning fare fill the inn's common room, where travelers gather to break their fast and exchange tales of their own quests. Amidst this lively ambiance, the young man partakes in a hearty meal, fortifying himself for the road ahead.
+        
+        Equipped with a renewed sense of resolve and clarity brought by the dawn's light, he takes a moment to reassess his belongings, ensuring that he's adequately prepared for the unknown trails that lie beyond the city gates.`,
+        screenState: {},
+        healthChange:+50,
+        staminaChange:+50,
+        options: [
+            {
+                text: `Continue`,
+                nextText: `Inn-3`
+            },
+        ],
+        picSRC: `` //🫙 INN
+    },
+
+    {
+        id: `Inn-3`,
+        text: `With his gear in order and a map clasped firmly in hand—a map now ingrained with the cryptic guidance bestowed upon him by Theodric—the young man bids farewell to the comforting embrace of the inn. Stepping into the crisp morning air, he feels a sense of anticipation coursing through his veins, mingled with a hint of apprehension.
+
+        The forest and its elusive ruins beckon once more, their secrets and challenges awaiting his discovery. With each step, the young man advances toward the city gates, ready to embark on a new chapter of his quest, fueled by the determination to unravel the mysteries that await amidst the uncharted wilderness.`,
+        screenState: {},
+        options: [
+            {
+                text: `Proceed towards the Ruins`,
+                nextText: `Forest-1`
+            },
+            {
+                text: `Go to the Market`,
+                nextText: `Forest-1`
+            },
+        ],
+        picSRC: `` //🫙 INN
+    },
+
+    {
+        id: `Inn-4`,
+        text: `As he approaches the gates, the city's bustle gradually fades behind him, and the forest's embrace looms ahead—a canvas of untamed beauty, fraught with enigmas yet to be unveiled.
+
+        With resolve firm and purpose clear, the young man steps beyond the threshold, setting forth on the path that will lead him deeper into the heart of the unknown, where revelations and trials await in equal measure.
+        
+        Before he proceeds he thinks to go to the market once more to see if there is anything he may need just in case or to proceed towards the Ruins, What do you do?`,
+        screenState: {},
+        options: [
+            {
+                text: `Proceed towards the Ruins`,
+                nextText: `Forest-1`
+            },
+            {
+                text: `Go to the Market`,
+                nextText: `Market-ring`
+            },
+        ],
+        picSRC: `` //🫙 INN
+    },
+
+    {
+        id: `Market-ring`,
+        text: `The young man, drawn by an inexplicable allure, ventures into the hidden shop tucked away from the bustling main street. Amongst the array of eclectic goods, his attention fixates on a peculiar ring nestled among the display.
+
+        A curious sensation pulls him towards the ring, as if an unseen force beckons him to it. Ignoring the array of other items, he reaches out and grasps the ring, feeling an inexplicable connection to this mysterious artifact.
+        
+        As he holds the ring in his hand, a voice, gentle yet resonant, interrupts his thoughts. It's the shopkeeper observing his actions with a knowing gaze. "You can keep it," the shopkeeper says, breaking the young man's reverie.`,
+        screenState: {},
+        options: [
+            {
+                text: `Continue`,
+                nextText: `Market-ring-1`
+            },
+        ],
+        picSRC: `` //🫙 INN
+    },
+
+    {
+        id: `Market-ring-1`,
+        text: `Perplexed, the young man looks up, meeting the shopkeeper's eyes, seeking an explanation for the unusual encounter. The shopkeeper then begins to unravel the mystique surrounding the ring.
+
+        "This ring was left here by a mysterious individual," the shopkeeper explains, his tone tinged with a hint of reverence. "They claimed that the ring possesses a unique quality—it calls upon its destined user and serves as an aid to them in times of need."
+        
+        The shopkeeper's words hang in the air, casting an aura of intrigue around the young man and the enigmatic ring in his possession. It becomes evident that this ring holds a significance beyond its mere appearance—a talisman intertwined with fate, awaiting its destined bearer.
+        
+        With gratitude and a sense of wonder, the young man accepts the gift, acknowledging the weight of destiny that seems to intertwine with his own.
+        
+        As he leaves the hidden shop, the ring clasped securely around his finger, he ponders the implications of this mysterious encounter. A new ally in the form of a mystical ring now accompanies him on his quest, its secrets and potential yet to be unveiled.`,
+        screenState: {},
+        options: [
+            {
+                text: `Leave for the Ruins`,
+                nextText: `Forest-1`
+            },
+        ],
+        picSRC: `` //🫙 INN
     },
 ]

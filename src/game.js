@@ -127,7 +127,7 @@ function showTextNode(textNodeDesc) {
     currentNode = textNode.id
     // text updated here
     storyText.innerText = textNode.text
-    console.log(textNode.options[0].nextText)
+    console.log("current Node",textNode.id,"next text>>",textNode.options[0].nextText)
 
     // picture updated here
     picBody.setAttribute('src', textNode.picSRC)
@@ -154,11 +154,13 @@ function showTextNode(textNodeDesc) {
             blackScreen.removeEventListener('click', goToGameOver);
         };
         blackScreenText.innerHTML = textNode.text;
+        blackScreen.style.display = '';
         // blackScreen.removeEventListener('click', continueStory);
         blackScreen.addEventListener('click', goToGameOver);
     }
     else{
         if (textNode.screenState.black) {
+            console.log("it should work")
             blackScreen.style.display = '';
             blackScreenText.innerHTML = textNode.text;
         
