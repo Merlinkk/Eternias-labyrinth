@@ -503,6 +503,8 @@ const textNodes = [
     {   
         id: `Side-2.1`,
         text: `Losing his way in the depths of the unfamiliar forest, exhausted and disoriented, he  encounters the dangers lurking within the wilderness. The young man's valiant efforts to escape the pursuing wolves, his heart racing with fear and adrenaline, ultimately culminate in a tragic outcome. The merciless jaws of the wild creatures claim him, sealing his fate in the depths of the uncharted lands he sought to conquer.`,
+        healthChange:-60,
+        staminaChange:-60,
         screenState: {},
         options: [
             {

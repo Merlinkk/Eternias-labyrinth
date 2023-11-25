@@ -4,6 +4,9 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    background-color: black;
+}
 #background{
     background-image: url('./Game-Assets/welcomeWall4.png');
     background-size: cover;
@@ -17,7 +20,7 @@
     margin-right: 20%;
     display: flex;
     justify-content: center;
-    height: 700px;
+    /* height: 700px; */
     margin-left: 20%;
 }
 #text{
@@ -92,6 +95,7 @@ h1{
     padding: 30px;
     border-radius: 2rem;
     font-family: Arbutus;
+    text-align: center;
 }
 /* h1:hover{
     color: #00DBC2;
@@ -236,12 +240,66 @@ p{
         background-color: black;
     }
     #insHeading {
-        font-size: 50px;
+        font-size: 40px;
         padding: 10px;
     }
     #insList {
        font-size: 20px;
        margin-right: 5%;
        margin-left: 5%;
+    }
+}
+
+@media(max-width:420px) and (max-height:780px){
+    #popup{
+        height: initial;
+    }
+    #container {
+        margin-right: 10%;
+        display: flex;
+        justify-content: center;
+        height: initial;
+        margin-left: 10%;
+    }
+    p {
+        font-size: 18px;
+        border: 1px solid white;
+        padding: 10px;
+        background-color: rgba(87, 255, 244, 0.747);
+        border-radius: 20px;
+        text-align: justify;
+    } 
+    h1 {
+        background-color: white;
+        padding: 20px;
+        font-size: 30px;
+        width: 70%;
+        text-align: center;
+    }  
+    #cross {
+        position: relative;
+        left: 45%;
+        background-color: black;
+    }
+    #insHeading {
+        font-size: 38px;
+        padding: 10px;
+    }
+    #insList {
+       font-size: 20px;
+       margin-right: 5%;
+       margin-left: 5%;
+    }
+}
+
+@media(max-width:391px) and (max-height:845px){
+    h1{
+        font-size: 26px;
+    }
+}
+
+@media(max-width:789px) and (max-height:1025px){
+    h1{
+        text-align: center;
     }
 }
