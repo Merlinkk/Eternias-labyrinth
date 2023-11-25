@@ -82,6 +82,9 @@ loadGame.addEventListener('click',()=>{
     progression = gameSaveObjectArray[isPlayerExists].savedProgress
     healthAndStaminaBArAdjust()
     updateInventory()
+    if(inventoryArray.includes('map')){
+        map.style.display = 'initial'
+    }
 })
 
 // 
