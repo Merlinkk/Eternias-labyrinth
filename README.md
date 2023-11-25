@@ -5,4 +5,5 @@ Set forth on an epic adventure in "Eternia's Labyrinth", a text-based role-playi
 In this captivating adventure, you are the architect of your destiny. Your character's journey unfolds through a series of intricate choices, each holding the power to alter the course of your path.
 
 # Game Preview
-![GIF](https://imgur.com/2m08tDZ)
+![GIF](https://github.com/Merlinkk/Eternias-labyrinth/raw/main/Game-Assets/IntroGif.gif)
+
