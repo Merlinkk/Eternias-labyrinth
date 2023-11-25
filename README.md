@@ -12,3 +12,4 @@ In this captivating adventure, you are the architect of your destiny. Your chara
 3. You get progression % points for crossing every relavent story point that you come across.
 4. Be Aware that your choices have consequences, and bad or careless decisions can lead you to your demise. 
 
+![img](./Game-Assets/armour.jpg)
