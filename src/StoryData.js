@@ -649,6 +649,7 @@ const textNodes = [
         
         As he leaves the hidden shop, the ring clasped securely around his finger, he ponders the implications of this mysterious encounter. A new ally in the form of a mystical ring now accompanies him on his quest, its secrets and potential yet to be unveiled.`,
         screenState: {},
+        inventoryChange:['Ring - Faunus aries'],
         options: [
             {
                 text: `Leave for the Ruins`,

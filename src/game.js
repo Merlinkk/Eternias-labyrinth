@@ -163,6 +163,7 @@ function showTextNode(textNodeDesc) {
         };
         blackScreenText.innerHTML = textNode.text;
         blackScreen.style.display = '';
+        document.body.style.overflow = `hidden`
         // blackScreen.removeEventListener('click', continueStory);
         blackScreen.addEventListener('click', goToGameOver);
     }
@@ -171,6 +172,7 @@ function showTextNode(textNodeDesc) {
             console.log("it should work")
             blackScreen.style.display = '';
             blackScreenText.innerHTML = textNode.text;
+            document.body.style.overflow = `hidden`
         
             const continueStory = () => {
                 showTextNode(textNode.options[0].nextText);
