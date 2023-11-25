@@ -496,7 +496,7 @@ const textNodes = [
                 nextText: `Inn`
             },
         ],
-        picSRC: `` //🫙 show city gates
+        picSRC: `./../Game-Assets/city-gates.png` //🫙 show city gates
     },
 
     // die going to ruins in the night

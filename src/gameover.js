@@ -24,6 +24,10 @@ window.onload=()=>{
 
 }
 
+const bgm3 = new Audio('./../Game-Assets/game-over.mp3')
+bgm3.play()
+bgm3.loop = true
+
 playAgain.addEventListener('click',()=>{
     window.location.href = './../index.html'
 })

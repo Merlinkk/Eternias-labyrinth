@@ -16,6 +16,11 @@ const staminaBar = document.getElementById('stamina-bar')
 const HPCount = document.getElementById('HPCount')
 const SPCount = document.getElementById('SPCount')
 
+// music
+const bgm2 = new Audio('./../Game-Assets/adventure.mp3')
+bgm2.play()
+bgm2.loop = true
+
 
 //Game save Mechanic 
 const saveGame = document.getElementById('saveGame')

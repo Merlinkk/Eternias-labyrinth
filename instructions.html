@@ -67,6 +67,10 @@
         const popup = document.getElementById('popup')
         const infodiv = document.getElementById('info')
 
+        const bgm1 = new Audio('./Game-Assets/ambiance.mp3')
+        bgm1.play()
+        bgm1.loop = true
+
         const borderGreen = '1px solid rgb(0, 255, 119)'
         const borderRed = '1px solid red'
         playerName.addEventListener('input',()=>{
