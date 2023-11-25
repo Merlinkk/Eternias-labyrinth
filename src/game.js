@@ -1,5 +1,6 @@
 localStorage.removeItem('playerMessage')
 localStorage.removeItem('progression')
+localStorage.removeItem('endStyle')
 
 let playerName = localStorage.getItem('playerName')
 
@@ -158,6 +159,7 @@ function showTextNode(textNodeDesc) {
         const goToGameOver = () => {
             localStorage.setItem('progression',progression)
             localStorage.setItem('playerMessage',textNode.playerMessage)
+            localStorage.setItem('endStyle',textNode.screenState.gameEND)
             window.location.href = "./gameover.html";
             blackScreen.removeEventListener('click', goToGameOver);
         };

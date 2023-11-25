@@ -11,6 +11,14 @@ const playAgain = document.getElementById('playAgain')
 
 const playerName = localStorage.getItem('playerName')
 
+const conditionalCheck = localStorage.getItem('endStyle')
+
+if(conditionalCheck != 'undefined'){
+    playerMessage.style.color = '#4bff00'
+}else if(conditionalCheck=='undefined'){
+    playerMessage.style.color = 'red'
+}
+
 window.onload=()=>{
     progressionStatus.innerHTML = progression
     if(playerMessageContent != `undefined`){

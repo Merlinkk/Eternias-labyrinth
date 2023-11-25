@@ -176,7 +176,7 @@ const textNodes = [
                 nextText: `Eternia-City-1`
             }
         ],
-        staminaChange: -10,
+        staminaChange: -20,
         healthChange: +5,
         picSRC: `./../Game-Assets/city-outskirts.jpg`
     },
@@ -230,6 +230,7 @@ const textNodes = [
         
         Where shall his curiosity lead him first—the vibrant markets, the inviting taverns, or the company of the townsfolk?`,
         screenState: {},
+        staminaChange:-5,
         options: [
             {
                 text: `Explore markets`,
@@ -261,7 +262,7 @@ const textNodes = [
         Grateful yet perplexed by the cryptic encounter, the young man clutches the tome, a tangible token of guidance in this labyrinth of uncertainty.He hesitates on what to do next`,
         screenState: {},
         inventoryChange:['Azure Magic Tome'],
-        progression:+5,
+        progressUpdate:+15,
         options: [
             {
                 text: `Ask the old man about the tome`,
@@ -288,6 +289,7 @@ const textNodes = [
         
         The old man returns to his silent contemplation, his presence fading into the vibrant tapestry of the market. The young man, now laden with the gift of ancient knowledge, stands amidst the bustling stalls, contemplating the next step on his journey.`,
         screenState: {},
+        progressUpdate:+5,
         options: [
             {
                 text: `Continue exploring the city`,
@@ -431,6 +433,7 @@ const textNodes = [
         The young man's senses sharpen, his curiosity and determination ignited by Theodric's direct guidance. There's a weightiness to Theodric's words, an aura of significance that amplifies the young man's understanding of the gravity of his quest.`,
         screenState: {},
         inventoryChange :['map'],
+        progressUpdate:+10,
         options: [
             {
                 text: `Ask him what he means?`,
@@ -462,6 +465,7 @@ const textNodes = [
         
         As Theodric retreats into the shadows, leaving the young man with the map and his enigmatic words lingering in the air, in the city street alone, a sense of determination takes root within him. He comprehends the magnitude of the task ahead, recognizing that while Theodric's support may be limited, the onus to unravel the secrets lies squarely upon his shoulders.`,
         screenState: {},
+        progressUpdate:+5,
         options: [
             {
                 text: `Leave for the ruins`,
@@ -496,7 +500,7 @@ const textNodes = [
                 nextText: `Inn`
             },
         ],
-        picSRC: `./../Game-Assets/city-gates.png` //🫙 show city gates
+        picSRC: `./../Game-Assets/city-gates.png`
     },
 
     // die going to ruins in the night
@@ -512,7 +516,7 @@ const textNodes = [
                 nextText: `Side-2.2`
             },
         ],
-        picSRC: `./../Game-Assets/death-night.gif` //🫙
+        picSRC: `./../Game-Assets/death-night.gif` //
     },
 
     {   
@@ -526,7 +530,7 @@ const textNodes = [
                 nextText: `END`,     //END
             },
         ],
-        picSRC: `./../Game-Assets/death-night.gif` //🫙
+        picSRC: `./../Game-Assets/death-night.gif` //
     },
 
     {
@@ -535,13 +539,14 @@ const textNodes = [
 
         Retreating from the looming mysteries that await in the forest, he seeks refuge within the inn's welcoming walls. The promise of a warm hearth, a soft bed, and the gentle reprieve of the night's rest beckon to him, offering a chance to clear his mind and reassess his path come the dawn of a new day.`,
         screenState: {},
+        progressUpdate:+5,
         options: [
             {
                 text: `Continue`,
                 nextText: `Inn-1`
             },
         ],
-        picSRC: `` //🫙 INN
+        picSRC: `./../Game-Assets/inn-outside.jpg` 
     },
 
     {
@@ -558,7 +563,7 @@ const textNodes = [
                 nextText: `Inn-2`
             },
         ],
-        picSRC: `` //🫙 INN
+        picSRC: `./../Game-Assets/inn.jpg` 
     },
 
     {
@@ -577,7 +582,7 @@ const textNodes = [
                 nextText: `Inn-3`
             },
         ],
-        picSRC: `` //🫙 INN
+        picSRC: `./../Game-Assets/morning.jpg` 
     },
 
     {
@@ -588,15 +593,11 @@ const textNodes = [
         screenState: {},
         options: [
             {
-                text: `Proceed towards the Ruins`,
-                nextText: `Forest-1`
-            },
-            {
-                text: `Go to the Market`,
-                nextText: `Forest-1`
+                text: `Continue`,
+                nextText: `Inn-4`
             },
         ],
-        picSRC: `` //🫙 INN
+        picSRC: `./../Game-Assets/inn-room.jpg`
     },
 
     {
@@ -617,7 +618,7 @@ const textNodes = [
                 nextText: `Market-ring`
             },
         ],
-        picSRC: `` //🫙 INN
+        picSRC: `./../Game-Assets/city-gates-2.jpg` 
     },
 
     {
@@ -628,13 +629,14 @@ const textNodes = [
         
         As he holds the ring in his hand, a voice, gentle yet resonant, interrupts his thoughts. It's the shopkeeper observing his actions with a knowing gaze. "You can keep it," the shopkeeper says, breaking the young man's reverie.`,
         screenState: {},
+        staminaChange:-5,
         options: [
             {
                 text: `Continue`,
                 nextText: `Market-ring-1`
             },
         ],
-        picSRC: `` //🫙 INN
+        picSRC: `./../Game-Assets/ring-shop.jpg`
     },
 
     {
@@ -649,6 +651,7 @@ const textNodes = [
         
         As he leaves the hidden shop, the ring clasped securely around his finger, he ponders the implications of this mysterious encounter. A new ally in the form of a mystical ring now accompanies him on his quest, its secrets and potential yet to be unveiled.`,
         screenState: {},
+        progressUpdate:+15,
         inventoryChange:['Ring - Faunus aries'],
         options: [
             {
@@ -656,6 +659,258 @@ const textNodes = [
                 nextText: `Forest-1`
             },
         ],
-        picSRC: `` //🫙 INN
+        picSRC: `./../Game-Assets/ring.jpg`
     },
+
+
+    // forest start
+    {
+        id: `Forest-1`,
+        text: `Entering the forest, the young man felt a sense of both trepidation and excitement as he ventured towards the ruins. The dense foliage and eerie silence made him question his decision, yet an inexplicable curiosity drove him forward.
+
+        As the daylight waned and the shadows grew longer, a faint, mystical trail of blue threads appeared before him, illuminating the path ahead. Entranced by this unexpected guidance, he followed the shimmering threads, their ethereal glow cutting through the darkness of the forest.
+        
+        Despite encountering various obstacles—twisted roots, overgrown vines, and fallen trees—the threads persisted, weaving a trail that seemed to defy the natural barriers in the woods. With each step, the young man's determination grew stronger, fueled by the inexplicable pull of the mystical path.`,
+        screenState: {},
+        options: [
+            {
+                text: `Continue`,
+                nextText: `Ruins`
+            },
+        ],
+        picSRC: `./../Game-Assets/forest-trail.jpg`
+    },
+    {
+        id: `Ruins`,
+        text: `Finally, after navigating through the challenges, the ruins emerged from the dense foliage. A sense of awe washed over him as he beheld the ancient structures, partly hidden by nature's relentless claim. The blue threads, having led him faithfully, now vanished into the air, leaving him standing at the threshold of the enigmatic ruins.
+
+        The young man took a moment to catch his breath, marveling at the sight before him. Despite the obstacles and the uncertainty of the journey, he felt a profound sense of accomplishment and an eagerness to uncover the secrets hidden within the ancient walls.`,
+        screenState: {},
+        staminaChange:-20,
+        options: [
+            {
+                text: `Enter-ruins`,
+                nextText: `Ruins-1`
+            },
+        ],
+        picSRC: `./../Game-Assets/ruins3.jpg`
+    },
+    
+    {
+        id: `Ruins-1`,
+        text: `The young man's footsteps echoed through the ancient corridors as he delved deeper into the heart of the ruins. Shadows danced on the walls, flickering with the faint light filtering through cracks in the structure.
+
+        Suddenly, his gaze fell upon a series of mysterious symbols etched into the stone wall. They glowed softly, emitting an otherworldly luminescence that seemed to pulsate in an ethereal rhythm. Each symbol held a unique elegance, yet an air of cryptic mystery enveloped them.`,
+        screenState: {},
+        options: [
+            {
+                text: `Inspect the symbols`,
+                nextText: `Symbols-1`
+            },
+            {
+                text: `Venture further`,
+                nextText: `Ruins-2`
+            },
+        ],
+        picSRC: `./../Game-Assets/ruin-corridoor.jpg`
+    }, 
+    {
+        id: `Symbols-1`,
+        text: `Intrigued by the familiar symbols adorning the walls of the ruins, the young man paused, captivated by their enigmatic beauty. Each symbol seemed to whisper a story of its own, hinting at ancient wisdom or forgotten tales.
+
+        Curiosity tugged at him, urging him to inspect the symbols more closely. He traced the intricate lines with his fingertips, feeling a strange resonance as if they held a deeper significance. They resembled markings he had seen before, a reminder of stories passed down through generations.
+        
+        As he immersed himself in deciphering the symbols, he felt a sense of connection, as if the ruins were welcoming him into their mysterious history. But a part of him also longed to explore further, to delve deeper into the heart of the ruins and uncover the secrets concealed within its corridors.
+        
+        After a moment of contemplation, torn between the allure of the symbols and the desire to explore, the young man made his choice. With a lingering glance at the symbols, he decided to continue forward, knowing that the ruins held more than just inscriptions on their walls—there were hidden chambers, forgotten passages, and untold stories waiting to be discovered. With a steady resolve, he ventured deeper into the heart of the ancient structure, eager to unravel the mysteries that lay ahead.`,
+        screenState: {},
+        progressUpdate:+5,
+        options: [
+            {
+                text: `Venture further`,
+                nextText: `Ruins-2`
+            },
+        ],
+        picSRC: `./../Game-Assets/symbols.jpg`
+    },
+
+    {
+        id: `Ruins-2`,
+        text: `The young man's exploration of the ruins led him to a chamber bathed in a soft, diffused light. In the center of the chamber stood a wall, imposing and ancient, adorned with carvings that hinted at a forgotten history.
+
+        Approaching the wall, he noticed a prominent feature—an enigmatic fissure, a deep crevice that split the stone surface in two. The gap seemed to beckon, hinting at a hidden passage or a concealed chamber beyond.
+        
+        Intrigued by the unusual sight, the young man cautiously examined the fissure, running his fingers along its edges. The stone felt weathered, worn by the passage of time, yet there was a peculiar smoothness to the break, as if it had been intentionally crafted rather than naturally formed.
+        
+        He peered into the darkness within the crevice, a sense of anticipation building within him. It seemed to stretch beyond the visible, disappearing into an abyss that whispered of untold secrets and uncharted depths.
+        
+        A decision lay before him once again: to investigate the fissure, perhaps risking the unknown dangers that might lurk within, or to continue exploring the known paths of the ruins, leaving the mystery of the crevice for another time. The choice weighed heavy on his mind as he stood before the tantalizing opening, contemplating the potential discoveries that awaited him on the other side.`,
+        screenState: {},
+        options: [
+            {
+                text: `Break the wall`,
+                nextText: `armor`
+            },
+            {
+                text: `Ignore the fissure and venture further`,
+                nextText: `Ruins-3`
+            },
+        ],
+        picSRC: `./../Game-Assets/fissure.jpg`
+    }, 
+
+    {
+        id: `armor`,
+        text: `The young man stepped into the small room, the air thick with an otherworldly stillness. His gaze was immediately drawn to a glint of light reflecting off an object in the corner. As he turned, his eyes widened in astonishment at the sight before him.
+
+        Nestled in the dimly lit room stood a suit of armor, ancient yet possessing an oddly futuristic appearance. Its surface was adorned with intricate symbols, each etching telling a tale of a forgotten era. The play of light on its surface seemed to dance around the symbols, casting an ethereal glow.
+        
+        Approaching cautiously, he reached out to touch the armor, feeling a strange sensation as his fingers grazed the smooth surface. Despite its elaborate design and apparent age, the armor was surprisingly light, almost weightless, as if crafted from a material unknown to the world.
+        
+        The symbols etched into the armor seemed to pulsate faintly, as if resonating with an unseen energy. They held an air of both antiquity and modernity, a paradox that left the young man intrigued and perplexed. He equips it and considers his nexy actions.`,
+        screenState: {},
+        inventoryChange:['Aegis Armour'],
+        progressUpdate:+15,
+        options: [
+            {
+                text: `Venture further into the ruins`,
+                nextText: `Ruins-3`
+            },
+        ],
+        picSRC: `./../Game-Assets/armour.jpg`
+    }, 
+
+    {
+        id: `Ruins-3`,
+        text: `The young man felt a sudden sense of foreboding as he confronted the wall adorned with glowing, foreign symbols that seemed to pulse with an eerie energy. Despite their alien appearance, a peculiar sensation washed over him, a strange understanding that transcended language barriers.
+
+        As the symbols intensified their ethereal glow, a chilling realization dawned upon him—this was no ordinary wall. It presented a puzzle, a riddle encoded within the enigmatic glyphs, and failure to decipher it might lead to dire consequences.
+        
+        His heart raced with a mixture of fear and determination. The urgency of the situation was palpable; the consequences of a wrong answer hung heavy in the air. The young man focused, trying to make sense of the cryptic symbols that appeared both familiar and alien, straining to unravel their hidden meaning.`,
+        screenState: {},
+        options: [
+            {
+                text: `Continue`,
+                nextText: `Ruins-4`
+            },
+        ],
+        picSRC: `./../Game-Assets/trapgate.jpg`
+    },
+    
+    {
+        id: `Ruins-4`,
+        text: `The pressure mounted as the symbols glowed brighter, their intensity signaling the urgency of the task. With a furrowed brow and a racing mind, he began piecing together the patterns, attempting to decipher the encoded message they held.
+
+        Each moment felt critical, the weight of the impending consequences bearing down on him. He wrestled with the puzzle, trying to align the symbols into a coherent sequence, his thoughts racing against the pulsating glow that seemed to demand an answer. He has mangaed to arrange four patterns but only one is true while the rest would lead to his demise. He has to choose and fast.`,
+        screenState: {},
+        options: [
+            {
+                text: `⊕ ∆ ⌂ ∞ ⌀ ⌬ ⨂ ⌁ ⌃ ⌆`,
+                nextText: `Death-ruin-1`
+            },
+            {
+                text: `∆ ∞ ⌬ ⌁ ⊕ ⌂ ⌆ ⌀ ⨂ ⌃`,
+                nextText: `Ruins-5`
+            },
+            {
+                text: `⌬ ⌃ ⌂ ∞ ⌀ ∆ ⌁ ⊕ ⨂ ⌆`,
+                nextText: `Death-ruin-1`
+            },
+            {
+                text: `⌬ ⌁ ⌆ ∞ ⊕ ⌀ ⨂ ∆ ⌃ ⌂`,
+                nextText: `Death-ruin-1`
+            },
+        ],
+        picSRC: `./../Game-Assets/trapgate.jpg`
+    },
+
+    {   
+        id: `Death-ruin-1`,
+        text: `The wall rumbled ominously, and suddenly, the ruins came alive. Traps, hidden within the walls for centuries, sprang to life with a malevolent fury. The young man was caught in a cascade of unforeseen perils, assaulted by mechanisms crafted to protect whatever lay hidden within.
+
+        Pain surged through him as the traps enacted their deadly dance. The young man stumbled, each step a struggle against the unyielding force of the ruins' defenses. His breaths grew shallow, his vision blurred, and regret gnawed at his heart.
+        
+        In those final moments, as he gasped for air, he lamented his choice, his failure to unlock the puzzle correctly. The weight of his misjudgment bore down on him as he drew his last breath, his sorrow echoing through the ancient halls—a tragic testament to the unforgiving consequences of a wrong answer within these treacherous ruins.`,
+        playerMessage: `The patten was wrong, and as a result the traps in the room killed you.`,
+        screenState : {black:true,gameOver:true},
+        options: [
+            {
+                text: `END`,
+                nextText: `END`,     //END
+            },
+        ],
+        picSRC: `` //🫙
+    },
+
+    {
+        id: `Ruins-5`,
+        text: `The shifting walls granted passage to the young man, and as he ventured deeper, his gaze fell upon an arresting sight—a sword, buried to the hilt in a mysterious metal block. Its presence seemed to beckon to him, a silent invitation within the ancient confines of the ruins.
+
+        Stopping in his tracks, the young man stood before the blade, eyes fixed upon its shimmering form. It stood as a solitary figure amidst the silent chamber, an enigmatic artifact exuding an aura of both allure and foreboding.
+        
+        The young man approached the sword cautiously, each step deliberate, his heart quickening with a blend of curiosity and reverence. It seemed to pulse faintly, as if resonating with some hidden energy, whispering secrets to the very air around it.
+        
+        He felt an inexplicable connection to the sword, a sense of destiny intertwining with the mystery it held. Hesitating just before its hilt, questions flooded his mind—what tales did this blade carry? What significance lay behind its placement within the depths of the ancient ruins?
+        
+        With uncertainty lingering in the air, the young man paused, his hand hovering just inches away from the ornate hilt. A moment of contemplation passed, the weight of history and the promise of undiscovered truths converging in this singular moment.
+        
+        Summoning his courage, he steadied his resolve, ready to unravel the enigma veiled within the grasp of the mysterious sword.`,
+        screenState: {},
+        staminaChange:-10,
+        options: [
+            {
+                text: `Pull the sword`,
+                nextText: `sword`
+            },
+        ],
+        picSRC: `./../Game-Assets/sword-main.jpg`
+    },
+
+    {
+        id: `sword`,
+        text: `As the young man grasped the hilt of the sword, a surge of energy coursed through him, and the world around him seemed to dissolve into a tapestry of ethereal visions. Scenes flashed before his eyes—a montage of moments from his journey through the ruins, the puzzles, the challenges, and the choices that led him to this pivotal moment.
+
+        Memories intertwined with glimpses of an unseen destiny, a path unfolding before him. He witnessed fragments of his past melding seamlessly with glimpses of a future yet to be written. The visions revealed a purpose, a quest that beckoned him beyond the boundaries of Eternia City, the place where his journey had begun.
+        
+        Each memory stirred within him a deeper sense of determination, a reaffirmation of his resilience in the face of trials, and a reminder of the mysteries he had encountered and conquered. The visions whispered of a greater calling, urging him to venture beyond the known, to explore realms unseen and mysteries unsolved.`,
+        screenState: {},
+        progressUpdate:+15,
+        options: [
+            {
+                text: `Continue`,
+                nextText: `sword-1`
+            },
+        ],
+        picSRC: `./../Game-Assets/sword-get.png`
+    },
+
+    {
+        id: `sword-1`,
+        text: `As the visions subsided, leaving behind a lingering sense of purpose, the young man felt a newfound resolve coursing through his veins. With the sword in hand and a clarity of purpose, he gazed beyond Eternia City—the first step in a journey that transcended the boundaries of time and space.
+
+        His determination surged, fueled by the revelations bestowed upon him. He knew that the path ahead would be fraught with challenges and enigmas, but the visions had ignited a fire within him—a fire that would guide him through the uncharted territories that lay beyond the familiar walls of Eternia City.`,
+        screenState: {},
+        options: [
+            {
+                text: `Continue`,
+                nextText: `end-1`
+            },
+        ],
+        picSRC: `./../Game-Assets/sword-get2.png`
+    },
+
+    {   
+        id: `end-1`,
+        text: `With a heart filled with resolve, the young man set forth, his footsteps echoing a determined rhythm. Beyond the city limits, beyond the horizon, he embarked on a quest fueled by destiny, armed with newfound insights and an unwavering determination to unravel the mysteries that awaited him in the vast unknown`,
+        playerMessage: `Congratulations. You have reached the end of the story. The young man is now aware of his destiny and will journey beyond Eternia City to fullfill it. Thank you for playing. *the score below is based on the relevant story items you need to aquire throughout your journey* `,
+        screenState : {black:true,gameOver:true,gameEND:true},
+        options: [
+            {
+                text: `END`,
+                nextText: `END`,     //END
+            },
+        ],
+        picSRC: `` //🫙
+    },
+
 ]
