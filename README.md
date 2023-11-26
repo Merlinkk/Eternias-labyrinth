@@ -24,7 +24,7 @@ https://www.figma.com/proto/Qo7EZqcK9Nb0u7i7YouBfQ/Eternia's-Labyrinth---Prelude
 ## Inspiration
 This porject was made taking inspiration from many role-playing games out there that explore a narrative dependent upon the player's decisions. I have used ChatGPT for better structure and grammar in my story.
 ## Tools Used
-Visual Studio Code,
+Visual Studio Code,Figma
 
 ## Screenshots
 ![image](https://github.com/Merlinkk/Eternias-labyrinth/assets/80953200/899618bb-7940-4ee0-85d0-3162f18c391f)
@@ -35,4 +35,4 @@ Visual Studio Code,
 
 
 
-Figma
+
