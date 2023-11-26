@@ -5,7 +5,7 @@ Set forth on an epic adventure in "Eternia's Labyrinth", a text-based role-playi
 ## Storyline & Gameplay
 In this captivating adventure, you are the architect of your destiny. Your character's journey unfolds through a series of intricate choices, each holding the power to alter the course of your path.
 
-![GIF](https://raw.githubusercontent.com/Merlinkk/Eternias-labyrinth/main/Game-Assets/IntroGif.gif)
+![Intro](https://github.com/Merlinkk/Eternias-labyrinth/assets/80953200/782b3f53-6a1a-4041-b889-c806af8ca178)
 
 ## What you need to do?
 1. This game is a text-based role rpg game.
@@ -24,5 +24,15 @@ https://www.figma.com/proto/Qo7EZqcK9Nb0u7i7YouBfQ/Eternia's-Labyrinth---Prelude
 ## Inspiration
 This porject was made taking inspiration from many role-playing games out there that explore a narrative dependent upon the player's decisions. I have used ChatGPT for better structure and grammar in my story.
 ## Tools Used
-Visual Studio Code,
-Figma
+Visual Studio Code,Figma
+
+## Screenshots
+![image](https://github.com/Merlinkk/Eternias-labyrinth/assets/80953200/899618bb-7940-4ee0-85d0-3162f18c391f)
+![image](https://github.com/Merlinkk/Eternias-labyrinth/assets/80953200/62c40ead-bf3c-430d-8585-1c70edd4d06f)
+![image](https://github.com/Merlinkk/Eternias-labyrinth/assets/80953200/4aa6fb26-125d-4808-805c-c32951287d2a)
+![image](https://github.com/Merlinkk/Eternias-labyrinth/assets/80953200/b8cb06bc-2527-487f-8eaf-3e79880df4e4)
+
+
+
+
+
